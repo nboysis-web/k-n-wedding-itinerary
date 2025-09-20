@@ -1,73 +1,413 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Nathan & Kaylin — Wedding Weekend</title>
-<script src="https://cdn.tailwindcss.com"></script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
-<style>
-:root{--bg:#111315;--card:#171a1d;--ink:#f3efe7;--muted:#cfc8b3;--gold:#d4af37;--gold-2:#b8860b}
-html,body{background:var(--bg);color:var(--ink)}
-body{font-family:'Poppins',system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto}
-h1,h2,h3,h4{font-family:'Cormorant Garamond',serif}
-.hero{background-image:url('https://images.unsplash.com/photo-1617094541810-7494520e1a3b?q=80&w=1974&auto=format&fit=crop');background-size:cover;background-position:center}
-.chip{background:rgba(212,175,55,.15);border:1px solid rgba(212,175,55,.35)}
-.ring-gold{box-shadow:0 0 0 2px rgba(212,175,55,.35) inset}
-.gold{color:var(--gold)}
-.btn-gold{background:var(--gold);color:#1a1a1a;font-weight:700}
-.btn-gold:hover{background:var(--gold-2)}
-.card{background:var(--card)}
-.timeline-dot{width:14px;height:14px;transform:rotate(45deg);background:var(--gold);border:3px solid #0b0c0e;}
-.sr-only-focusable:focus{position:static!important;width:auto;height:auto;margin:0;clip:auto}
-</style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Nathan & Kaylin — Wedding Weekend</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#111315;--card:#171a1d;--ink:#f3efe7;--muted:#cfc8b3;--gold:#d4af37;--gold-2:#b8860b}
+    html,body{background:var(--bg);color:var(--ink)}
+    body{font-family:'Poppins',system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto}
+    h1,h2,h3,h4{font-family:'Cormorant Garamond',serif}
+    .hero{background-image:url('https://images.unsplash.com/photo-1617094541810-7494520e1a3b?q=80&w=1974&auto=format&fit=crop');background-size:cover;background-position:center}
+    .chip{background:rgba(212,175,55,.15);border:1px solid rgba(212,175,55,.35)}
+    .ring-gold{box-shadow:0 0 0 2px rgba(212,175,55,.35) inset}
+    .gold{color:var(--gold)}
+    .btn-gold{background:var(--gold);color:#1a1a1a;font-weight:700}
+    .btn-gold:hover{background:var(--gold-2)}
+    .card{background:var(--card)}
+    .timeline-dot{width:14px;height:14px;transform:rotate(45deg);background:var(--gold);border:3px solid #0b0c0e;}
+    .sr-only-focusable:focus{position:static!important;width:auto;height:auto;margin:0;clip:auto}
+  </style>
 </head>
 <body class="antialiased">
-<!-- Header -->
-<header class="sticky top-0 z-50 backdrop-blur bg-black/60 border-b border-white/10">
-<nav class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
-<a href="#top" class="flex items-center gap-2">
-<svg aria-hidden="true" class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6l-2 4-4 .5 3 3-.8 4.5L12 16l3.8 2-1-4.5 3-3-4-.5z"/></svg>
-<span class="font-bold">Nathan & Kaylin</span>
-</a>
-<div class="hidden md:flex items-center gap-6 text-sm">
-<a class="hover:text-white text-neutral-300" href="#itinerary">Itinerary</a>
-<a class="hover:text-white text-neutral-300" href="#venues">Venues</a>
-<a class="hover:text-white text-neutral-300" href="#faq">Info</a>
-</div>
-<button id="menuBtn" class="md:hidden p-2 rounded ring-1 ring-white/20" aria-label="Open menu">
-<svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
-</button>
-</nav>
-<div id="mobileMenu" class="hidden md:hidden border-t border-white/10">
-<div class="max-w-6xl mx-auto px-4 py-2 flex flex-col gap-2 text-sm">
-<a class="py-2 text-neutral-300 hover:text-white" href="#itinerary">Itinerary</a>
-<a class="py-2 text-neutral-300 hover:text-white" href="#venues">Venues</a>
-<a class="py-2 text-neutral-300 hover:text-white" href="#faq">Info</a>
-</div>
-</div>
-</header>
+  <!-- Header -->
+  <header class="sticky top-0 z-50 backdrop-blur bg-black/60 border-b border-white/10">
+    <nav class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="#top" class="flex items-center gap-2">
+        <svg aria-hidden="true" class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6l-2 4-4 .5 3 3-.8 4.5L12 16l3.8 2-1-4.5 3-3-4-.5z"/></svg>
+        <span class="font-bold">Nathan & Kaylin</span>
+      </a>
+      <div class="hidden md:flex items-center gap-6 text-sm">
+        <a class="hover:text-white text-neutral-300" href="#itinerary">Itinerary</a>
+        <a class="hover:text-white text-neutral-300" href="#venues">Venues</a>
+        <a class="hover:text-white text-neutral-300" href="#faq">Info</a>
+      </div>
+      <button id="menuBtn" class="md:hidden p-2 rounded ring-1 ring-white/20" aria-label="Open menu">
+        <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </nav>
+    <div id="mobileMenu" class="hidden md:hidden border-t border-white/10">
+      <div class="max-w-6xl mx-auto px-4 py-2 flex flex-col gap-2 text-sm">
+        <a class="py-2 text-neutral-300 hover:text-white" href="#itinerary">Itinerary</a>
+        <a class="py-2 text-neutral-300 hover:text-white" href="#venues">Venues</a>
+        <a class="py-2 text-neutral-300 hover:text-white" href="#faq">Info</a>
+      </div>
+    </div>
+  </header>
 
+  <!-- Hero -->
+  <section class="hero min-h-[55vh] grid place-items-center text-center" id="top">
+    <div class="bg-black/60 px-8 py-10 rounded-2xl ring-1 ring-white/10">
+      <h1 class="text-5xl md:text-6xl font-bold">Nathan & Kaylin</h1>
+      <p class="mt-3 tracking-widest uppercase text-sm text-neutral-200">Viva Las Wedding</p>
+      <p class="mt-1 text-lg">Sunday, September 28, 2025 • Las Vegas, NV</p>
+      <a href="#itinerary" class="inline-block mt-6 btn-gold px-5 py-2 rounded-xl">View Weekend Plan</a>
+    </div>
+  </section>
 
-<!-- Hero -->
-<section class="hero min-h-[55vh] grid place-items-center text-center" id="top">
-<div class="bg-black/60 px-8 py-10 rounded-2xl ring-1 ring-white/10">
-<h1 class="text-5xl md:text-6xl font-bold">Nathan & Kaylin</h1>
-<p class="mt-3 tracking-widest uppercase text-sm text-neutral-200">Viva Las Wedding</p>
-<p class="mt-1 text-lg">Sunday, September 28, 2025 • Las Vegas, NV</p>
-<a href="#itinerary" class="inline-block mt-6 btn-gold px-5 py-2 rounded-xl">View Weekend Plan</a>
-</div>
-</section>
+  <main class="max-w-6xl mx-auto px-4 md:px-6">
+    <!-- Filter/Legend -->
+    <section aria-label="Audience filter" class="sticky top-[64px] z-40 mt-8 mb-4">
+      <div class="card rounded-2xl px-4 py-3 border border-white/10">
+        <div class="flex flex-wrap items-center gap-2 justify-between">
+          <div class="flex items-center gap-2 text-sm">
+            <span class="opacity-80">Filter:</span>
+            <button class="filterBtn chip px-3 py-1 rounded-full text-xs" data-filter="all" aria-pressed="true">All</button>
+            <button class="filterBtn chip px-3 py-1 rounded-full text-xs" data-filter="everyone">Everyone</button>
+            <button class="filterBtn chip px-3 py-1 rounded-full text-xs" data-filter="bachelor">Bachelor/Bachelorette</button>
+            <button class="filterBtn chip px-3 py-1 rounded-full text-xs" data-filter="setup">Setup Crew</button>
+            <button class="filterBtn chip px-3 py-1 rounded-full text-xs" data-filter="wedding">Wedding Party</button>
+          </div>
+          <div class="text-xs text-neutral-300 hidden sm:block">
+            <span class="inline-flex items-center gap-2"><span class="w-2.5 h-2.5 rounded-full bg-emerald-400"></span> Confirmed Time</span>
+            <span class="inline-flex items-center gap-2 ml-4"><span class="w-2.5 h-2.5 rounded-full bg-amber-400"></span> Flexible</span>
+          </div>
+        </div>
+      </div>
+    </section>
 
+    <!-- Itinerary -->
+    <section id="itinerary" class="py-10">
+      <h2 class="text-4xl font-bold text-center">Wedding Weekend</h2>
+      <p class="text-center mt-2 text-neutral-300">Friday, Sept 26 – Sunday, Sept 28, 2025</p>
 
-<main class="max-w-6xl mx-auto px-4 md:px-6">
-<!-- Filter/Legend -->
-<section aria-label="Audience filter" class="sticky top-[64px] z-40 mt-8 mb-4">
-<div class="card rounded-2xl px-4 py-3 border border-white/10">
-<div class="flex flex-wrap items-center gap-2 justify-between">
-<div class="flex items-center gap-2 text-sm">
-<span class="opacity-80">Filter:</span>
-<button class="filterBtn chip px-3 py-1 rounded-full text-xs" data-filter="all" aria-pressed="true">All</button>
+      <!-- Day: Friday -->
+      <article class="mt-10">
+        <h3 class="text-2xl md:text-3xl font-semibold gold text-center">Friday • Bachelor/Bachelorette Day</h3>
+        <div class="mt-6 grid md:grid-cols-[150px,1fr] gap-6">
+          <div class="text-neutral-300 md:text-right">Sept 26</div>
+          <div class="space-y-4">
+            <!-- 11–1 Brunch -->
+            <div class="event card rounded-xl p-4 border border-white/10" data-tags="everyone bachelor wedding" data-flexible="true">
+              <div class="flex items-start justify-between gap-3">
+                <div>
+                  <div class="text-sm text-neutral-300">11:00 AM – 1:00 PM <span class="inline-block align-middle ml-2 w-2.5 h-2.5 rounded-full bg-amber-400" title="Flexible"></span></div>
+                  <h4 class="text-xl font-semibold">Group Brunch</h4>
+                  <p class="text-sm text-neutral-300">Location TBA</p>
+                </div>
+                <div class="flex gap-2">
+                  <button class="ics btn-gold px-3 py-1.5 rounded-lg text-xs" data-title="Group Brunch" data-start="2025-09-26T11:00:00-07:00" data-end="2025-09-26T13:00:00-07:00">Add to Calendar</button>
+                </div>
+              </div>
+              <div class="mt-2 flex flex-wrap gap-2 text-[11px]">
+                <span class="px-2 py-1 rounded-full chip">Everyone</span>
+              </div>
+            </div>
+            <!-- 2–5 Free for all -->
+            <div class="event card rounded-xl p-4 border border-white/10" data-tags="everyone bachelor" data-flexible="true">
+              <div class="flex items-start justify-between gap-3">
+                <div>
+                  <div class="text-sm text-neutral-300">2:00 PM – 5:00 PM <span class="inline-block align-middle ml-2 w-2.5 h-2.5 rounded-full bg-amber-400" title="Flexible"></span></div>
+                  <h4 class="text-xl font-semibold">Free‑for‑all</h4>
+                  <p class="text-sm text-neutral-300">Explore, nap, pool — just don’t get lost</p>
+                </div>
+              </div>
+              <div class="mt-2 flex flex-wrap gap-2 text-[11px]"><span class="px-2 py-1 rounded-full chip">Bachelor/Bachelorette</span></div>
+            </div>
+            <!-- 6–9 Topgolf -->
+            <div class="event card rounded-xl p-4 border border-white/10" data-tags="bachelor wedding" data-flexible="false">
+              <div class="flex items-start justify-between gap-3">
+                <div>
+                  <div class="text-sm text-neutral-300">6:00 PM – 9:00 PM <span class="inline-block align-middle ml-2 w-2.5 h-2.5 rounded-full bg-emerald-400" title="Confirmed"></span></div>
+                  <h4 class="text-xl font-semibold">Topgolf</h4>
+                  <p class="text-sm text-neutral-300">Las Vegas (MGM Grand)</p>
+                </div>
+                <div class="flex gap-2">
+                  <a target="_blank" href="https://maps.apple.com/?q=Topgolf+Las+Vegas" class="px-3 py-1.5 rounded-lg ring-1 ring-white/15 text-xs">Map</a>
+                  <button class="ics btn-gold px-3 py-1.5 rounded-lg text-xs" data-title="Topgolf" data-start="2025-09-26T18:00:00-07:00" data-end="2025-09-26T21:00:00-07:00">Add to Calendar</button>
+                </div>
+              </div>
+              <div class="mt-2 flex flex-wrap gap-2 text-[11px]"><span class="px-2 py-1 rounded-full chip">Bachelor/Bachelorette</span></div>
+            </div>
+            <!-- 10:30 Kaskade -->
+            <div class="event card rounded-xl p-4 border border-white/10" data-tags="bachelor wedding" data-flexible="false">
+              <div class="flex items-start justify-between gap-3">
+                <div>
+                  <div class="text-sm text-neutral-300">10:30 PM <span class="inline-block align-middle ml-2 w-2.5 h-2.5 rounded-full bg-emerald-400" title="Confirmed"></span></div>
+                  <h4 class="text-xl font-semibold">Kaskade @ Zouk Nightclub</h4>
+                  <p class="text-sm text-neutral-300">Resorts World</p>
+                </div>
+                <div class="flex gap-2">
+                  <a target="_blank" href="https://maps.apple.com/?q=Zouk+Nightclub+Las+Vegas" class="px-3 py-1.5 rounded-lg ring-1 ring-white/15 text-xs">Map</a>
+                  <button class="ics btn-gold px-3 py-1.5 rounded-lg text-xs" data-title="Kaskade at Zouk" data-start="2025-09-26T22:30:00-07:00" data-end="2025-09-27T01:30:00-07:00">Add to Calendar</button>
+                </div>
+              </div>
+              <div class="mt-2 flex flex-wrap gap-2 text-[11px]"><span class="px-2 py-1 rounded-full chip">Bachelor/Bachelorette</span></div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Day: Saturday -->
+      <article class="mt-14">
+        <h3 class="text-2xl md:text-3xl font-semibold gold text-center">Saturday • Setup Day + Dinner</h3>
+        <div class="mt-6 grid md:grid-cols-[150px,1fr] gap-6">
+          <div class="text-neutral-300 md:text-right">Sept 27</div>
+          <div class="space-y-4">
+            <!-- Pool/lounge -->
+            <div class="event card rounded-xl p-4 border border-white/10" data-tags="everyone setup" data-flexible="true">
+              <div class="flex items-start justify-between gap-3">
+                <div>
+                  <div class="text-sm text-neutral-300">Daytime <span class="inline-block align-middle ml-2 w-2.5 h-2.5 rounded-full bg-amber-400" title="Flexible"></span></div>
+                  <h4 class="text-xl font-semibold">Airbnb: Pool & Hang</h4>
+                  <p class="text-sm text-neutral-300">Everyone welcome to lounge or help prep</p>
+                </div>
+              </div>
+              <div class="mt-2 flex flex-wrap gap-2 text-[11px]"><span class="px-2 py-1 rounded-full chip">Everyone</span><span class="px-2 py-1 rounded-full chip">Setup Crew</span></div>
+            </div>
+            <!-- Setup -->
+            <div class="event card rounded-xl p-4 border border-white/10" data-tags="setup" data-flexible="true">
+              <div class="flex items-start justify-between gap-3">
+                <div>
+                  <div class="text-sm text-neutral-300">Afternoon <span class="inline-block align-middle ml-2 w-2.5 h-2.5 rounded-full bg-amber-400" title="Flexible"></span></div>
+                  <h4 class="text-xl font-semibold">Reception Setup @ Aunt Debby’s</h4>
+                  <p class="text-sm text-neutral-300">Tables, lights, decor — many hands welcome</p>
+                </div>
+                <div class="flex gap-2">
+                  <a target="_blank" href="https://maps.apple.com/?address=5700%20Avenida%20Silla,%20Las%20Vegas,%20NV" class="px-3 py-1.5 rounded-lg ring-1 ring-white/15 text-xs">Map</a>
+                </div>
+              </div>
+              <div class="mt-2 flex flex-wrap gap-2 text-[11px]"><span class="px-2 py-1 rounded-full chip">Setup Crew</span></div>
+            </div>
+            <!-- Dinner -->
+            <div class="event card rounded-xl p-4 border border-white/10" data-tags="everyone setup" data-flexible="true">
+              <div class="flex items-start justify-between gap-3">
+                <div>
+                  <div class="text-sm text-neutral-300">Evening (TBD) <span class="inline-block align-middle ml-2 w-2.5 h-2.5 rounded-full bg-amber-400" title="Flexible"></span></div>
+                  <h4 class="text-xl font-semibold">Dinner at Debby’s</h4>
+                  <p class="text-sm text-neutral-300">Details to come</p>
+                </div>
+                <div class="flex gap-2">
+                  <button class="px-3 py-1.5 rounded-lg ring-1 ring-white/15 text-xs" disabled title="Time TBD">Add to Calendar</button>
+                </div>
+              </div>
+              <div class="mt-2 flex flex-wrap gap-2 text-[11px]"><span class="px-2 py-1 rounded-full chip">Everyone</span></div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Day: Sunday -->
+      <article class="mt-14">
+        <h3 class="text-2xl md:text-3xl font-semibold gold text-center">Sunday • The Big Day</h3>
+        <div class="mt-6 grid md:grid-cols-[150px,1fr] gap-6">
+          <div class="text-neutral-300 md:text-right">Sept 28</div>
+          <div class="space-y-4">
+            <!-- Morning flexible -->
+            <div class="event card rounded-xl p-4 border border-white/10" data-tags="everyone wedding" data-flexible="true">
+              <div class="flex items-start justify-between gap-3">
+                <div>
+                  <div class="text-sm text-neutral-300">Morning – 5:00 PM <span class="inline-block align-middle ml-2 w-2.5 h-2.5 rounded-full bg-amber-400" title="Flexible"></span></div>
+                  <h4 class="text-xl font-semibold">Do‑your‑thing</h4>
+                  <p class="text-sm text-neutral-300">Kaylin glam time • Nathan doing Nathan things</p>
+                </div>
+              </div>
+              <div class="mt-2 flex flex-wrap gap-2 text-[11px]"><span class="px-2 py-1 rounded-full chip">Wedding Party</span></div>
+            </div>
+            <!-- Ceremony -->
+            <div class="event card rounded-xl p-4 border border-white/10" data-tags="everyone wedding" data-flexible="false">
+              <div class="flex items-start justify-between gap-3">
+                <div>
+                  <div class="text-sm text-neutral-300">5:30 PM <span class="inline-block align-middle ml-2 w-2.5 h-2.5 rounded-full bg-emerald-400" title="Confirmed"></span></div>
+                  <h4 class="text-xl font-semibold">Wedding Ceremony @ Sure Thing Chapel</h4>
+                  <p class="text-sm text-neutral-300">702 S Casino Center Blvd, Las Vegas, NV</p>
+                </div>
+                <div class="flex gap-2">
+                  <a target="_blank" href="https://maps.apple.com/?q=Sure%20Thing%20Chapel%20Las%20Vegas" class="px-3 py-1.5 rounded-lg ring-1 ring-white/15 text-xs">Map</a>
+                  <button class="ics btn-gold px-3 py-1.5 rounded-lg text-xs" data-title="Wedding Ceremony (Sure Thing Chapel)" data-start="2025-09-28T17:30:00-07:00" data-end="2025-09-28T18:15:00-07:00">Add to Calendar</button>
+                </div>
+              </div>
+              <div class="mt-2 flex flex-wrap gap-2 text-[11px]"><span class="px-2 py-1 rounded-full chip">Everyone</span></div>
+            </div>
+            <!-- Photos / Vegas sign -->
+            <div class="event card rounded-xl p-4 border border-white/10" data-tags="wedding everyone" data-flexible="false">
+              <div class="flex items-start justify-between gap-3">
+                <div>
+                  <div class="text-sm text-neutral-300">7:30 PM <span class="inline-block align-middle ml-2 w-2.5 h-2.5 rounded-full bg-emerald-400" title="Confirmed"></span></div>
+                  <h4 class="text-xl font-semibold">Ubers to Welcome to Las Vegas Sign</h4>
+                </div>
+                <div class="flex gap-2">
+                  <a target="_blank" href="https://maps.apple.com/?q=Welcome%20to%20Fabulous%20Las%20Vegas%20sign" class="px-3 py-1.5 rounded-lg ring-1 ring-white/15 text-xs">Map</a>
+                  <button class="ics btn-gold px-3 py-1.5 rounded-lg text-xs" data-title="Photos at Las Vegas Sign" data-start="2025-09-28T19:30:00-07:00" data-end="2025-09-28T20:15:00-07:00">Add to Calendar</button>
+                </div>
+              </div>
+              <div class="mt-2 flex flex-wrap gap-2 text-[11px]"><span class="px-2 py-1 rounded-full chip">Wedding Party</span></div>
+            </div>
+            <!-- Reception -->
+            <div class="event card rounded-xl p-4 border border-white/10" data-tags="everyone" data-flexible="false">
+              <div class="flex items-start justify-between gap-3">
+                <div>
+                  <div class="text-sm text-neutral-300">8:30 PM – Late <span class="inline-block align-middle ml-2 w-2.5 h-2.5 rounded-full bg-emerald-400" title="Confirmed"></span></div>
+                  <h4 class="text-xl font-semibold">Reception @ Chuck & Debby’s</h4>
+                  <p class="text-sm text-neutral-300">5700 Avenida Silla, Las Vegas, NV</p>
+                </div>
+                <div class="flex gap-2">
+                  <a target="_blank" href="https://maps.apple.com/?address=5700%20Avenida%20Silla,%20Las%20Vegas,%20NV" class="px-3 py-1.5 rounded-lg ring-1 ring-white/15 text-xs">Map</a>
+                  <button class="ics btn-gold px-3 py-1.5 rounded-lg text-xs" data-title="Wedding Reception (Chuck & Debby’s)" data-start="2025-09-28T20:30:00-07:00" data-end="2025-09-29T00:00:00-07:00">Add to Calendar</button>
+                </div>
+              </div>
+              <div class="mt-2 flex flex-wrap gap-2 text-[11px]"><span class="px-2 py-1 rounded-full chip">Everyone</span></div>
+            </div>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <!-- Venues -->
+    <section id="venues" class="py-12">
+      <h2 class="text-3xl font-semibold text-center">Locations</h2>
+      <div class="mt-6 grid md:grid-cols-2 gap-6">
+        <div class="card rounded-2xl p-6 border border-white/10">
+          <h3 class="text-2xl font-semibold">Ceremony — Sure Thing Chapel</h3>
+          <p class="text-neutral-300 mt-2">702 S Casino Center Blvd, Las Vegas, NV</p>
+          <div class="mt-3 flex flex-wrap gap-2 text-sm">
+            <a target="_blank" href="https://maps.apple.com/?q=Sure%20Thing%20Chapel%20Las%20Vegas" class="px-3 py-1.5 rounded-lg ring-1 ring-white/15">Open in Maps</a>
+            <button class="copy px-3 py-1.5 rounded-lg ring-1 ring-white/15" data-copy="Sure Thing Chapel, 702 S Casino Center Blvd, Las Vegas, NV">Copy Address</button>
+          </div>
+        </div>
+        <div class="card rounded-2xl p-6 border border-white/10">
+          <h3 class="text-2xl font-semibold">Reception — Chuck & Debby’s</h3>
+          <p class="text-neutral-300 mt-2">5700 Avenida Silla, Las Vegas, NV</p>
+          <div class="mt-3 flex flex-wrap gap-2 text-sm">
+            <a target="_blank" href="https://maps.apple.com/?address=5700%20Avenida%20Silla,%20Las%20Vegas,%20NV" class="px-3 py-1.5 rounded-lg ring-1 ring-white/15">Open in Maps</a>
+            <button class="copy px-3 py-1.5 rounded-lg ring-1 ring-white/15" data-copy="5700 Avenida Silla, Las Vegas, NV">Copy Address</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ / Info -->
+    <section id="faq" class="py-12">
+      <h2 class="text-3xl font-semibold text-center">Good to Know</h2>
+      <div class="mt-6 grid md:grid-cols-2 gap-6">
+        <details class="card rounded-2xl p-5 border border-white/10 group" open>
+          <summary class="cursor-pointer list-none flex items-center justify-between">
+            <span class="text-xl font-semibold">Dress & Vibe</span>
+            <span class="opacity-60 group-open:rotate-180 transition-transform">▾</span>
+          </summary>
+          <p class="mt-3 text-neutral-300 text-sm">Look sharp but comfy. Ceremony chic; reception is backyard‑party energy. Pool hangs on Saturday if you’re around.</p>
+        </details>
+        <details class="card rounded-2xl p-5 border border-white/10 group">
+          <summary class="cursor-pointer list-none flex items-center justify-between">
+            <span class="text-xl font-semibold">Rideshare & Parking</span>
+            <span class="opacity-60 group-open:rotate-180 transition-transform">▾</span>
+          </summary>
+          <p class="mt-3 text-neutral-300 text-sm">Uber/Lyft recommended for Friday night and Sunday. Limited street parking near Debby’s; please be kind to neighbors.</p>
+        </details>
+        <details class="card rounded-2xl p-5 border border-white/10 group">
+          <summary class="cursor-pointer list-none flex items-center justify-between">
+            <span class="text-xl font-semibold">Kids</span>
+            <span class="opacity-60 group-open:rotate-180 transition-transform">▾</span>
+          </summary>
+          <p class="mt-3 text-neutral-300 text-sm">Family‑friendly overall; nightclub obviously 21+. Reception is casual—little ones welcome.</p>
+        </details>
+        <details class="card rounded-2xl p-5 border border-white/10 group">
+          <summary class="cursor-pointer list-none flex items-center justify-between">
+            <span class="text-xl font-semibold">Questions?</span>
+            <span class="opacity-60 group-open:rotate-180 transition-transform">▾</span>
+          </summary>
+          <p class="mt-3 text-neutral-300 text-sm">Text Nathan or Kaylin. If plans shift, we’ll update times here and your calendar invites will still show the right locations.</p>
+        </details>
+      </div>
+    </section>
+  </main>
+
+  <footer class="text-center py-10 border-t border-white/10">
+    <p class="text-sm text-neutral-400">Made with ❤ for Nathan & Kaylin • 2025</p>
+  </footer>
+
+  <!-- Toast -->
+  <div id="toast" class="fixed bottom-5 right-5 translate-y-10 opacity-0 transition-all"></div>
+
+  <script>
+    // Mobile menu
+    const menuBtn=document.getElementById('menuBtn');
+    const mobileMenu=document.getElementById('mobileMenu');
+    if(menuBtn){menuBtn.addEventListener('click',()=>mobileMenu.classList.toggle('hidden'))}
+
+    // Simple toast
+    function toast(msg){
+      const t=document.getElementById('toast');
+      t.innerHTML=`<div class="card ring-gold text-sm px-4 py-2 rounded-xl">${msg}</div>`;
+      t.classList.remove('opacity-0','translate-y-10');
+      t.classList.add('opacity-100','-translate-y-0');
+      setTimeout(()=>{t.classList.add('opacity-0','translate-y-10')},2200);
+    }
+
+    // Copy buttons
+    document.querySelectorAll('.copy').forEach(btn=>{
+      btn.addEventListener('click',async()=>{
+        try{await navigator.clipboard.writeText(btn.dataset.copy);toast('Address copied');}
+        catch{toast('Unable to copy')}})
+    })
+
+    // Audience filter (show/hide cards by data-tags). Values: all/everyone/bachelor/setup/wedding
+    const filterBtns=[...document.querySelectorAll('.filterBtn')];
+    function applyFilter(val){
+      const events=[...document.querySelectorAll('.event')];
+      events.forEach(el=>{
+        const tags=(el.dataset.tags||'').split(/\s+/);
+        if(val==='all'||tags.includes(val)){
+          el.classList.remove('hidden')
+        }else{el.classList.add('hidden')}
+      });
+      filterBtns.forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.filter===val)));
+      toast(val==='all'?'Showing everything':`Filter: ${val}`);
+    }
+    filterBtns.forEach(b=>b.addEventListener('click',()=>applyFilter(b.dataset.filter)));
+    applyFilter('all');
+
+    // Lightweight ICS generator
+    function makeICS({title, start, end, location}){
+      // Times should be ISO with timezone offset; convert to UTC Z for ICS
+      const toUTC = (iso)=>{
+        const d=new Date(iso);
+        const y=d.getUTCFullYear();
+        const m=String(d.getUTCMonth()+1).padStart(2,'0');
+        const day=String(d.getUTCDate()).padStart(2,'0');
+        const hh=String(d.getUTCHours()).padStart(2,'0');
+        const mm=String(d.getUTCMinutes()).padStart(2,'0');
+        const ss='00';
+        return `${y}${m}${day}T${hh}${mm}${ss}Z`;
+      };
+      const dtStart=toUTC(start);
+      const dtEnd=end?toUTC(end):dtStart;
+      const uid=Math.random().toString(36).slice(2)+"@nathan-kaylin";
+      const ics=`BEGIN:VCALENDAR\nVERSION:2.0\nPRODID:-//N&K//Itinerary//EN\nBEGIN:VEVENT\nUID:${uid}\nDTSTAMP:${toUTC(new Date().toISOString())}\nDTSTART:${dtStart}\nDTEND:${dtEnd}\nSUMMARY:${title.replace(/\n/g,' ')}\n${location?`LOCATION:${location.replace(/\n/g,' ')}\n`:''}END:VEVENT\nEND:VCALENDAR`;
+      return new Blob([ics],{type:'text/calendar'});
+    }
+
+    document.querySelectorAll('.ics').forEach(btn=>{
+      btn.addEventListener('click',()=>{
+        const title=btn.dataset.title||'Event';
+        const start=btn.dataset.start; // ISO with -07:00
+        const end=btn.dataset.end;
+        const el=btn.closest('.event');
+        const location=(el?.querySelector('p.text-sm')?.textContent||'').trim();
+        if(!start){toast('Time TBD');return}
+        const blob=makeICS({title,start,end,location});
+        const url=URL.createObjectURL(blob);
+        const a=document.createElement('a');
+        a.href=url; a.download=`${title.replace(/[^a-z0-9]+/gi,'_')}.ics`;
+        document.body.appendChild(a); a.click(); a.remove();
+        setTimeout(()=>URL.revokeObjectURL(url),5000);
+      })
+    })
+  </script>
+</body>
 </html>
